@@ -42,8 +42,8 @@ def download_mt(input_file, output_file, limit):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', '--input_files', nargs='+', type=str)
-    parser.add_argument('-o', '--output_path', type=str)
+    parser.add_argument('-i', '--input_files', nargs='+', type=str, required=True)
+    parser.add_argument('-o', '--output_path', type=str,  required=True)
     parser.add_argument('-l', '--chunk_limit', type=int, default=1000000)
 
     args = parser.parse_args()
